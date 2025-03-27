@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Questhive</title>
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <!--BootStrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--CSS-styles-->
+    <link rel="stylesheet" href="static/styles.css" />
+    <!--Font-Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!--BootStrap-Scripts-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <style>
+        #first{
+          margin: 0;
+          background-color: #291709;
+          background-image: url("images/bg_img.jpg");
+          background-size: 100%;
+        }
+        
+       .logo{
+          display: flex;
+          justify-content: space-between;
+          color: #291709;
+          margin-left: -10px;
+          width: 100%;
+          margin-bottom: 20px;
+          position: absolute;
+      }
+      .img1{
+          width: 48px;
+          height: 55px;
+          margin-top: 0px;
+          margin-left: 15px;
+          display: inline-block;
+          position: absolute;
+          padding:0px;
+      }
+      span{
+          font-size: 44px;
+      }
+          
+      #questhive{
+          position: absolute;
+          left: 10px;
+          top: 3px;
+          margin-top: 0px;
+          font-size: 28px;
+          font-weight: bold;
+          margin-left: 53px;
+          color: #291709;
+      }
+      .head{
+          position: absolute;
+          top: 47px;
+          left: 100px;
+          font-size: 16px;
+          font-weight: bolder;
+          display: inline-block;
+          color: #291709;
+      }
+      .f0{
+          display: inline-block;
+          height: 35px;
+          width: 100px;
+          color:#FFF8EE;
+          padding-left: 20px;
+          float: right;
+          padding-top: 4px;
+          position: absolute;
+          left: 1429px;
+          top: 16px;
+          background-color: #291709;
+          text-decoration:none;
+          font-size: 18px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          box-shadow: 2px 2px 5px gray;
+      }
+      .fa-right-to-bracket{
+        color: #FFF8EE;
+        padding-right: 5px;
+        padding-left: 10px;
+      }
+      .f0:hover{
+          
+          color: #FFF8EE;
+          text-decoration: none;
+          background-color: #7e634e;
+      }
+      
+      .fa-circle-exclamation{
+        color: #291709;
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+      .about1{
+        display: inline-block;
+        position: absolute;
+        right: 370px;
+        top: 20px;
+        color:#291709;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .about1:hover{
+        text-decoration: none;
+        color: #291709;
+      }
+      .about1::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #291709;
+        border-radius: 50px;
+        transition: .3s;
+      }
+      .about1:hover::after{
+        width: 90%;
+      }
+      .contact1{
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 170px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color:rgb(69, 37, 16);
+      }
+      .contact1:hover{
+        text-decoration: none;
+        color: #291709;
+      }
+      .contact1::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #291709;
+        border-radius: 50px;
+        transition: .3s;
+      }
+      .contact1:hover::after{
+        width: 90%;
+      }
+      .fa-phone{
+        color: #291709;
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+      .qs{
+        font-size: 32px;
+        display: inline-block;
+        position: absolute;
+        top: 165px;
+        left: 473px;
+        color:#291709;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        opacity: 70%;
+        font-weight: bold;
+      } 
+      .qs:first-letter{
+        font-size: 50px;
+      }
+      .h3{
+        position: relative;
+        font-size: 4rem;
+        color: #6c5c3b;
+      }
+      .hr1{
+        border-style: none;
+        background-color: #291709;
+        width: 53.7%;
+        height: 2px;
+        position: absolute;
+        top: 52px;
+        left: 715px;
+      }
+      .mid_1{
+        display:inline-block ;
+        position: absolute;
+        top: 240px;
+        left: 400px;
+        background-color: #291709;
+        height: 250px;
+        width: 500px;
+        border-radius: 20px;
+        opacity: 80%;
+      }
+      .p_tag{
+        display:inline-block ;
+        position: absolute;
+        top: 267px;
+        left: 430px;
+        font-size: 16px;
+        text-indent: 35px;
+        font-weight: bold;
+        word-spacing: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #FFF8EE;
+        width: 440px;
+        border-radius: 20px;
+        opacity: 90%;
+      }
+      .pie1{
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        height: 200px;
+        width: 200px;
+        opacity: 80%;
+      }
+      .h2{
+        display: inline-block;
+        position: absolute;
+        bottom: 295px;
+        left: 60px;
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #8f5b34;
+        font-weight: bold;
+      }
+      .h2_1{
+        display: inline-block;
+        position: absolute;
+        bottom: 273px;
+        left: 60px;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #8f5b34;
+        font-weight: bold;
+      }
+      .h2_2{
+        display: inline-block;
+        position: absolute;
+        bottom: 245px;
+        left: 60px;
+        font-size: 17px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:#361e0b;
+        font-weight: bold;
+      }
+      .L2{
+        display: inline-block;
+        position: absolute;
+        bottom: 120px;
+        left: 118px;
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #8c735e;
+        font-weight: bold;
+      }
+      .side1{
+        height: 170px;
+        width: 170px;
+        display: inline-block;
+        position: absolute;
+        right: 70px;
+        top: 200px;
+        border-radius: 20px;
+      }
+      .side{
+        height: 180px;
+        width: 180px;
+        display: inline-block;
+        position: absolute;
+        right: 210px;
+        top: 350px;
+        border-radius: 20px;
+      }
+      .side2{
+        height: 120px;
+        width: 120px;
+        display: inline-block;
+        position: absolute;
+        right: 65px;
+        bottom: 200px;
+        border-radius: 20px;
+      }
+      .quote{
+        position: absolute;
+        bottom: 50px;
+        left: 440px;
+        width: 500px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color:#522f15;
+      }
+      .quote1{
+        position: absolute;
+        display: inline-block;
+        bottom: 380px;
+        right: 210px;
+        width: 180px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color:#522f15;
+      }
+      .img{
+        display: inline-block;
+        position: absolute;
+        top: 670px;
+      }
+      .writes{
+        margin-left: 800px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+
+
+<body>
+    <section id="first">
+
+      <div class="logo">
+        <img class="img1" src="images/image2.png" alt="text">
+        <h3 id="questhive"><span>Q</span>uesthive</h3>
+        <h4 class="head">Learn to lead</h4>
+        <a href="#second" class="about1">About<i class="fa-solid fa-circle-exclamation"></i></a>
+        <a href="#fifth" class="contact1">Contact us<i class="fa-solid fa-phone"></i></a>
+        <a class="f0" href="login.php" >Login<i class="fa-solid fa-right-to-bracket"></i></a>
+        <hr class="hr1">
+      </div>
+      <h1 class="qs">Questions Generator !</h1> 
+      <div class="mid_1">
+
+      </div>
+      <p class="p_tag">A Questions Generator is a tool or platform that automatically creates questions based on user input. You simply enter a topic or set some parameters, and the platform generates a variety of questions related to that input. It's useful for educators, content creators, and anyone needing questions for quizzes, discussions, or interviews, saving time and enhancing creativity.</p>
+      <img src="images/pie1.png" alt="" class="pie1">
+      <h2 class="h2">Progress</h2>
+      <h2 class="h2_1">through</h2>
+      <h2 class="h2_2">KNOWLEDGE !</h2>
+      <h2 class="L2">#QH</h2>
+      <img src="images/side_img.jpg" alt="" class="side1">
+      <img src="images/img_a1 (1).jpg" alt="" class="side">
+      <img src="images/side2.jpg" alt="" class="side2">
+
+      <p class="quote">"Boost your brainstorming sessions with diverse and tailored questions in seconds."</p>
+      <p class="quote1"><q>Unlock endless possibilities with our question generator platform.</q></p>
+    </section>
+    <section id="second">
+      <img class="img" src="images/image2.png" alt="" width="650px" height="705">
+      <div class="writes">
+        <h3>About</h3>
+        <br>
+        <h5>Welcome to Questhive - Where<br>You can generate different<br>different types of questions<br>in a same platform</h5>
+        <br>
+        <p>Using Questhive, you can easily generate a variety of questions<br>on a single platform. Whether you need quiz questions, discussion<br>prompts, or trivia, Questhive simplifies the process <br>with diverse options to suit all your needs. Explore and create<br>questions effortlessly with us!</p>
+      </div>
+    </section>
+
+    <section id="third">
+      <div class="align">
+        <h3 class="h3">Why use our Services ?</h3>
+      </div>
+      <div class="row">
+        <div class="feature-box col-lg-4">
+            <img src="images/ai.png" alt="" width="300px" height="300px">
+            <h4><strong>Automation</strong></h4>
+            <p>Streamline your workflow<br>with our automated question<br>generator. Quickly produce a<br>wide range of questions<br>without manual input, saving<br>time.</p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <img src="images/way.png" alt="" width="300px" height="300px">
+          <h4><strong>Easy to Use</strong></h4>
+          <p>Our interface is user-friendly,<br>allowing you to effortlessly<br>create and customize questions<br>with just a few clicks.<br>No technical skills required!<br></p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <img src="images/chess.png" alt="" width="300px" height="300px">
+          <h4><strong>See the Difference</strong></h4>
+          <p>Experience the efficiency and<br>precision of automated question<br>generation. Notice improved<br>accuracy and variety in<br>questions compared to manual<br>methods.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="fourth">
+      <h3>Types of Questions</h3>
+      <div class="row">
+        <div class="pricing col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Essay-Paragraph</h3>
+            </div>
+            <div class="card-body">
+              <p>Generate Question/Answer</p>
+              <p>From Paragraph/Essay</p>
+              <p>Uses NLP, NLTK</p>
+              <p>Also provide Answer</p>
+              <button
+                type="button"
+                class="w-100 btn btn-lg btn-block btn-dark"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Coding</h3>
+            </div>
+            <div class="card-body">            
+              <p>Generate Coding Questions</p>
+              <p>Can Select Difficulty</p>
+              <p>Uses DataSet</p>
+              <p>Generate `n` Number of Questions</p>
+              <button type="button" class="w-100 btn btn-lg btn-block btn-dark">
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing col-lg-4 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3>MCQs</h3>
+            </div>
+            <div class="card-body">            
+              <p>Generate MCQ Questions</p>
+              <p>Can Select Difficulty</p>
+              <p>Uses Generative AI (lemma)</p>
+              <p>Generate Questions topicwise</p>
+              <button type="button" class="w-100 btn btn-lg btn-block btn-dark">
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fifth">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.792044920742!2d80.0754642!3d13.0489049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261c68a9f3031%3A0xab41c8bdcf32ad47!2sPanimalar%20Engineering%20College!5e0!3m2!1sen!2sin!4v1730740881057!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="content">
+        <h3>At Questhive, we invite you to<br>create an AI world<br>of technology to the future...</h3>
+        <h5>E-mail:</h5>
+        <p>clumsycoders2@gmail.com</p>
+        <h5>Phone:</h5>
+        <p>1234556777</p>
+        <h5>Address:</h5>
+        <p>Panimalar Engineering College<br> Poonamallee, Chennai, Tamil Nadu 600123</p>
+      </div>
+    </section>
+      <footer id="footer">
+        <i class="social-icon fa-brands fa-facebook"></i>
+        <i class="social-icon fa-brands fa-twitter"></i>
+        <i class="social-icon fa-brands fa-instagram"></i>
+        <i class="social-icon fa-solid fa-envelope"></i>
+        <p>© Copyright Questhive</p>
+      </footer>
+</body>
+</html>
